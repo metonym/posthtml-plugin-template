@@ -1,0 +1,14 @@
+# ignore test coverage folder
+/coverage
+
+# ignore folder containing published code
+/lib
+
+/node_modules
+
+.DS_Store
+yarn-debug.log*
+yarn-error.log*
+
+# ignore zip file created if/when prepacking the plugin
+*.tgz
