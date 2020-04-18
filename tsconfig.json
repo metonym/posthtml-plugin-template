@@ -2,11 +2,12 @@
   "compilerOptions": {
     "declaration": true,
     "esModuleInterop": true,
-    "lib": ["esnext"],
+    "lib": ["esnext", "DOM"],
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "lib",
     "strict": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["**/*.test.ts"]
 }

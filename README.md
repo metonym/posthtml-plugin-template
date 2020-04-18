@@ -1,9 +1,8 @@
-# template-posthtml-plugin <img align="right" width="220" height="200" title="PostHTML logo" src="http://posthtml.github.io/posthtml/logo.svg">
+# posthtml-plugin-template <img align="right" width="220" height="200" title="PostHTML logo" src="http://posthtml.github.io/posthtml/logo.svg">
 
 [![Build][build]][build-badge]
-[![Coverage][codecov-shield]][codecov]
 
-> Template for developing and publishing PostHTML plugins.
+> Template for authoring PostHTML plugins in TypeScript.
 
 Inspired by the [posthtml-plugin-boilerplate](https://github.com/posthtml/posthtml-plugin-boilerplate), this template is used to develop and build [PostHTML](https://github.com/posthtml) plugins with TypeScript.
 
@@ -13,42 +12,17 @@ Don't forget to update the [changelog](CHANGELOG.md) for each release published 
 
 ## Available Scripts
 
-### `yarn test:tdd`
-
-Runs all tests in [watch mode](https://jestjs.io/docs/en/cli#watch). Use this command when developing a plugin.
-
 ### `yarn test`
 
-Runs [Jest](https://jestjs.io/) and [ts-jest](https://github.com/kulshekhar/ts-jest) and outputs testing coverage.
+Runs unit tests using tape as a test runner.
 
-### `yarn build`
+### `yarn test:tdd`
+
+Runs all tests in watch mode.
+
+### `yarn prepack`
 
 Builds the plugin for production.
-
-## Continuous Integration (CI)
-
-[Travis CI](https://travis-ci.org/) is used to build and test pushed commits.
-
-```yaml
-language: node_js
-node_js: stable
-cache: yarn
-after_success: npx codecov
-# Travis CI executes the `yarn test` script by default
-# Test coverage should be printed to the Travis build log
-```
-
-The Travis CI configuration can be modified in [`.travis.yml`](.travis.yml).
-
-## Other tools
-
-Linters are run in [husky](https://github.com/typicode/husky) hooks to enforce a consistent code and formatting style:
-
-- **[Prettier](https://prettier.io/)**: opinionated code formatter used to lint staged files in the pre-commit husky hook
-
-- **[TSLint](https://github.com/palantir/tslint)**: extensible TypeScript linter used to lint (and fix) errors in the pre-commit husky hook
-
-- **[commitlint](https://github.com/conventional-changelog/commitlint)**: commit message linter used in the commit-msg husky hook to encourage [semantic commit messages](https://seesparkbox.com/foundry/semantic_commit_messages)
 
 ## Publishing to npm
 
@@ -66,11 +40,11 @@ Update the relevant publishing-related fields in [package.json](package.json).
 {
   "repository": {
     "type": "git",
-    "url": "https://github.com/{USER}/template-posthtml-plugin.git"
+    "url": "https://github.com/{USER}/posthtml-plugin-template.git"
   },
-  "homepage": "https://github.com/{USER}/template-posthtml-plugin",
+  "homepage": "https://github.com/{USER}/posthtml-plugin-template",
   "keywords": ["posthtml", "posthtml plugin", "plugin"],
-  "bugs": "https://github.com/{USER}/template-posthtml-plugin/issues"
+  "bugs": "https://github.com/{USER}/posthtml-plugin-template/issues"
 }
 ```
 
@@ -78,7 +52,5 @@ Update the relevant publishing-related fields in [package.json](package.json).
 
 [MIT](LICENSE)
 
-[build]: https://travis-ci.com/metonym/template-posthtml-plugin.svg?branch=master
-[build-badge]: https://travis-ci.com/metonym/template-posthtml-plugin
-[codecov]: https://codecov.io/gh/metonym/template-posthtml-plugin
-[codecov-shield]: https://img.shields.io/codecov/c/github/metonym/template-posthtml-plugin.svg
+[build]: https://travis-ci.com/metonym/posthtml-plugin-template.svg?branch=master
+[build-badge]: https://travis-ci.com/metonym/posthtml-plugin-template
