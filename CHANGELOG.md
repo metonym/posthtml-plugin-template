@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Stablize plugin API for the first major release
 
-## [1.0.0] - YYYY-MM-DD
+<!--
+## [0.1.0](https://github.com/metonym/posthtml-plugin-template/releases/tag/v0.1.0) - 2020-04-05
 
 - Initial release
+-->
