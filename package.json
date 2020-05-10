@@ -1,22 +1,21 @@
 {
   "name": "posthtml-plugin-template",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "description": "Template for authoring PostHTML plugins in TypeScript",
   "author": "Eric Liu (https://github.com/metonym)",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "lib/plugin.js",
+  "types": "lib/plugin.d.ts",
   "scripts": {
-    "test": "tsnd node_modules/tape/bin/tape src/**.test.ts",
-    "test:tdd": "tsnd --respawn node_modules/tape/bin/tape src/**.test.ts",
+    "test": "tsnd src/**.test.ts",
+    "test:tdd": "tsnd --respawn src/**.test.ts",
     "prepack": "tsc"
   },
   "dependencies": {
-    "posthtml": "^0.12.2"
+    "posthtml": "^0.13.0"
   },
   "devDependencies": {
-    "@types/tape": "^4.13.0",
-    "tape": "^4.13.2",
+    "@types/node": "^13.13.5",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.8.3"
   },

@@ -1,10 +1,10 @@
 import posthtml from "posthtml";
-import test from "tape";
+import { strict as test } from "assert";
 import { plugin } from "./plugin";
 
-test("plugin returns the correct result", async (t) => {
-  const result = await posthtml().use(plugin()).process(`<body></body>`);
+async function run() {
+  const { html } = await posthtml().use(plugin()).process("<body></body>");
+  test.equal(html, "<body></body>");
+}
 
-  t.equal(result.html, "<body></body>");
-  t.end();
-});
+run();

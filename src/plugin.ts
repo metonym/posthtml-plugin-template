@@ -1,4 +1,4 @@
-import { PostHTML } from 'posthtml';
+import { PostHTML } from "posthtml";
 
 function plugin() {
   return function posthtmlPlugin(tree: PostHTML.Node) {
@@ -6,4 +6,5 @@ function plugin() {
   };
 }
 
-export { plugin };
+export default plugin;
+export { plugin, plugin as posthtmlPlugin };
